@@ -1,0 +1,65 @@
+
+#!/usr/bin/env python3
+"""
+NIET CTF 2026 — RSA Small Exponent
+
+Attack: Exact integer cube root
+Condition: e = 3 and m^3 < n
+"""
+
+def integer_cube_root(c: int) -> int:
+    """Return the floor of the exact integer cube root of c."""
+    if c < 0:
+        raise ValueError("Ciphertext must be non-negative")
+
+    low, high = 0, 1
+
+    while high**3 <= c:
+        high *= 2
+
+    while low + 1 < high:
+        mid = (low + high) // 2
+
+        if mid**3 <= c:
+            low = mid
+        else:
+            high = mid
+
+    return low
+
+
+def main():
+    print("NIET CTF 2026 - RSA Small Exponent")
+    print("Enter the ciphertext as a decimal integer.")
+    raw = input("Ciphertext: ").strip()
+
+    try:
+        c = int(raw, 0)
+    except ValueError:
+        try:
+            c = int(raw, 10)
+        except ValueError:
+            print("Error: Please enter a valid integer.")
+            return
+
+    m = integer_cube_root(c)
+
+    if m**3 != c:
+        print("The ciphertext is not a perfect cube.")
+        print("The direct cube-root attack may not apply.")
+        return
+
+    plaintext = m.to_bytes((m.bit_length() + 7) // 8, "big")
+
+    print("\n[+] Exact cube root verified.")
+    print("[+] Recovered plaintext bytes:", repr(plaintext))
+
+    try:
+        decoded = plaintext.decode("utf-8")
+        print("[+] Decoded plaintext:", decoded)
+    except UnicodeDecodeError:
+        print("[!] Plaintext is not valid UTF-8.")
+
+
+if __name__ == "__main__":
+    main()
