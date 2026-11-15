@@ -1,0 +1,155 @@
+# 🏴‍☠️ OBSIDIAN CTF 2026 – Writeups
+
+My cybersecurity challenge documentation from **Obsidian Labs CTF 2026 – Jeopardy-Style Cybersecurity Challenge**.
+
+This repository contains challenge notes, investigation methodologies, technical approaches, evidence analysis, and writeups covering different areas of cybersecurity, with a primary focus on **Digital Forensics**.
+
+## 📌 Competition Details
+
+| Category | Details |
+|---|---|
+| Competition | Obsidian Labs CTF 2026 |
+| Organiser | Obsidian Labs |
+| Format | Jeopardy-Style |
+| Domain | Cybersecurity |
+| Focus Area | Digital Forensics |
+| Challenge Mode | Offline |
+| Participant | Dhargiss V |
+
+---
+
+## 🧩 Challenge Writeups
+
+### 1. Format Archaeology
+
+- **Category:** Digital Forensics
+- **Difficulty:** Easy
+- **Points:** 100
+
+**Description:**
+
+Investigating an intercepted PNG image and Windows registry export to identify a staged encrypted container and recover its incident memo.
+
+**Key Concepts:**
+- PNG file structure analysis
+- Hexadecimal inspection
+- Data carving and extraction
+- Windows registry analysis
+- Archive identification
+
+📂 [View Writeup](./Format-Archaeology/README.md)
+
+---
+
+### 2. The Missing Request
+
+- **Category:** Digital Forensics
+- **Difficulty:** Medium
+- **Points:** 250
+
+**Description:**
+
+Investigating suspicious network activity using a packet capture and TLS keylog to identify a covert exfiltration channel, reconstruct the transferred archive, and recover investigation notes.
+
+**Key Concepts:**
+- PCAP analysis
+- Wireshark and TShark
+- ICMP traffic investigation
+- Network stream identification
+- Archive reconstruction
+- Network forensics
+
+📂 [View Writeup](./The-Missing-Request/README.md)
+
+---
+
+### 3. Deleted Notes
+
+- **Category:** Digital Forensics
+- **Difficulty:** Medium
+- **Points:** 250
+- **Challenge Status:** Challenge window closed
+
+**Description:**
+
+Examining a raw FAT filesystem image to identify deleted memoranda, investigate audit records, reconstruct a recovery passkey, and decrypt an encrypted evidence container.
+
+**Key Concepts:**
+- FAT filesystem analysis
+- Deleted file recovery
+- Orphaned cluster identification
+- Filesystem metadata examination
+- Audit log analysis
+- Hash verification
+- Evidence decryption
+
+📂 [View Writeup](./Deleted-Notes/README.md)
+
+---
+
+## 🛠️ Tools & Technologies
+
+Tools relevant to the documented challenges:
+
+- Wireshark
+- TShark
+- Python
+- Binwalk
+- Hex Editors
+- CyberChef
+- Autopsy
+- The Sleuth Kit
+- Archive Extraction Utilities
+
+## 📁 Repository Structure
+
+```text
+OBSIDIAN-CTF-2026/
+│
+├── README.md
+│
+├── Format-Archaeology/
+│   ├── README.md
+│   ├── screenshots/
+│   └── evidence-notes/
+│
+├── The-Missing-Request/
+│   ├── README.md
+│   ├── screenshots/
+│   └── evidence-notes/
+│
+└── Deleted-Notes/
+    ├── README.md
+    ├── screenshots/
+    └── evidence-notes/
+```
+
+## 🎯 Learning Objectives
+
+- Develop practical digital forensics skills.
+- Understand file structures and hidden data.
+- Improve network traffic investigation techniques.
+- Explore deleted file recovery and filesystem analysis.
+- Strengthen technical problem-solving abilities.
+- Document cybersecurity investigations professionally.
+
+## ⚠️ Disclaimer
+
+This repository is intended strictly for educational and cybersecurity learning purposes.
+
+All challenge descriptions and artifacts are associated with Obsidian Labs CTF 2026. Technical writeups will document the investigation process and findings.
+
+## 👨‍💻 Author
+
+**Dhargiss V**
+
+Cybersecurity Student | Aspiring Security Engineer
+
+- GitHub: [Dhargiss12](https://github.com/Dhargiss12)
+- LinkedIn: [My LinkedIn Profile](https://www.linkedin.com/)
+
+---
+
+**Learn • Investigate • Analyse • Improve** 🔐
+
+*Every challenge is an opportunity to understand cybersecurity beyond theory.*
