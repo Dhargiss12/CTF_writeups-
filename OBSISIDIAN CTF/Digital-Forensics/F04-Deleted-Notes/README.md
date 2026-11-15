@@ -34,3 +34,5 @@ The primary evidence container `VAULT.ENC` is encrypted. Triage notes indicate t
 4. **Vault Decryption:** Extract `VAULT.ENC` from the filesystem image and run:
    ```bash
    python decrypt_vault.py VAULT.ENC <PASSKEY>
+
+   OBSIDIAN{c4rv3d_f4t32_clvst3r_ch41n_9918}
