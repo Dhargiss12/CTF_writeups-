@@ -4,7 +4,7 @@
 **Category:** Digital Forensics  
 **Difficulty:** Easy  
 **Points:** 100  
-**Mode:** Offline  
+**Mode:** Online
 
 ---
 
